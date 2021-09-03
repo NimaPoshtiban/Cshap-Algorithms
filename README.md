@@ -3,8 +3,7 @@
 
 ## Algorithms
 
-An algorithm is an unambiguous specification of how to solve a class of problems. It is
-a set of rules that precisely define a sequence of operations.
+An algorithm is a finite sequence of well-defined, computer-implementable instructions, typically to solve a class of specific problems or to perform a computation
 
 `B` - Beginner, `A` - Advanced
 
