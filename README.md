@@ -11,4 +11,4 @@ a set of rules that precisely define a sequence of operations.
 ### Algorithms by Topic
 
 * **Sorting**
-  * `B` [Bubble Sort](Algorithms/Sorting Algorithms/Bubble Sort)
+  * `B` [Bubble Sort](https://github.com/NimaPoshtiban/Cshap-Algorithms/tree/master/Algorithms/Sorting%20Algorithms/Bubble%20Sort)
