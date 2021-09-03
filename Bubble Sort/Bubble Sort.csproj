@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Bubble_Sort</RootNamespace>
+    <RootNamespace>Sorting</RootNamespace>
   </PropertyGroup>
 
 </Project>

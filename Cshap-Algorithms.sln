@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "libs", "libs", "{3F2194D7-E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms_DataStruct_Lib", "Algorithms_DataStruct_Lib\Algorithms_DataStruct_Lib.csproj", "{DF5D2C11-29D5-4763-B6C4-941EB717BD27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bubble Sort.Tests", "Bubble Sort.Tests\Bubble Sort.Tests.csproj", "{5EE4498B-CF3C-4BF1-BCFD-717AABA5A5AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{DF5D2C11-29D5-4763-B6C4-941EB717BD27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF5D2C11-29D5-4763-B6C4-941EB717BD27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF5D2C11-29D5-4763-B6C4-941EB717BD27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EE4498B-CF3C-4BF1-BCFD-717AABA5A5AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE4498B-CF3C-4BF1-BCFD-717AABA5A5AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE4498B-CF3C-4BF1-BCFD-717AABA5A5AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE4498B-CF3C-4BF1-BCFD-717AABA5A5AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -33,6 +39,7 @@ Global
 		{B2A84C63-0966-45F9-BD0A-7089AFB836D9} = {6EF27364-5AE0-4A95-85C8-78AFA4E0232F}
 		{3F2194D7-E050-464B-B1DF-7C758FB7B0F6} = {6EF27364-5AE0-4A95-85C8-78AFA4E0232F}
 		{DF5D2C11-29D5-4763-B6C4-941EB717BD27} = {3F2194D7-E050-464B-B1DF-7C758FB7B0F6}
+		{5EE4498B-CF3C-4BF1-BCFD-717AABA5A5AB} = {6EF27364-5AE0-4A95-85C8-78AFA4E0232F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13F00EC9-8A11-4F3A-9A86-71187D6CEB4B}

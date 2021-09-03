@@ -1,13 +1,12 @@
 ﻿using System;
 
-namespace Bubble_Sort
+namespace Sorting
 {
-    class Bubble_Sort
+    public class Bubble_Sort
     {
         static void Main(string[] args)
         {
-            int[] array = { 5, 2, 3, 45, 6 };
-            BubbleSort(array);
+           
         }
 
         public static void BubbleSort(int[] array)
