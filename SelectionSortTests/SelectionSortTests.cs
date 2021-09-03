@@ -1,11 +1,10 @@
 ﻿using NUnit.Framework;
 using System;
-namespace Bubble_SortTests
+namespace SelectionSortTests
 {
-    [TestFixture]
-    public class Bubble_SortTests
+    public class SelectionSortTests
     {
-        private static int[][] Samples()
+        private int[][] Samples()
         {
             int[][] samples = new int[9][];
             samples[0] = new[] { 1 };
@@ -17,11 +16,11 @@ namespace Bubble_SortTests
             samples[6] = new[] { 0, -5, 3, 3 };
             samples[7] = new[] { 0, -5, 3, 0 };
             samples[8] = new[] { 3, 2, 5, 5, 1, 0, 7, 8 };
-            
+
             return samples;
         }
 
-        private void RunTestForBubbleSortAlgorithm(Action<int[]> sort)
+        private void RunTestForSelectionSortAlgorithm(Action<int[]> sort)
         {
             foreach (var sample in Samples())
             {
@@ -31,7 +30,7 @@ namespace Bubble_SortTests
             }
         }
 
-        private static void PrintOut(int[] array)
+        private void PrintOut(int[] array)
         {
             TestContext.WriteLine("-----Trace-----\n");
             foreach (var element in array)
@@ -42,9 +41,10 @@ namespace Bubble_SortTests
         }
 
         [Test]
-        public void BubbleSort_ValidInput_SortedInput()
+        public void SelectionSort_ValidInput_SortedInput()
         {
-            RunTestForBubbleSortAlgorithm(Sorting.Bubble_Sort.BubbleSort);
+            RunTestForSelectionSortAlgorithm(Sorting.Selection_Sort.SelectionSort);
         }
     }
+
 }
