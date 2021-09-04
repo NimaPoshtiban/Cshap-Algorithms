@@ -24,7 +24,7 @@ namespace Data_Structures.Linked_List
         {
             return first == null;
         }
-        
+
         public void AddLast(int item)
         {
             var node = new Node(item);
