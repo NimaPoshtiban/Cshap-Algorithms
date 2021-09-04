@@ -10,7 +10,7 @@ namespace Data_Structures.Linked_List
     {
         private class Node
         {
-            private int value;
+            public int value;
             public Node next;
             public Node(int value)
             {
@@ -50,6 +50,18 @@ namespace Data_Structures.Linked_List
             }
         }
 
+        public int IndexOf(int item)
+        {
+            int index = 0;
+            var current = first;
+            while(current!=null)
+            {
+                if (current.value == item) return index;
+                current = current.next;
+                index++;
+            }
+            return -1;
+        }
     }
 }
 

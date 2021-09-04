@@ -8,10 +8,11 @@ namespace Data_Structures
         {
             var list = new LinkedList();
 
-            list.AddLast(1);
-            list.AddLast(2);
-            list.AddLast(3);
+            list.AddLast(10);
+            list.AddLast(20);
+            list.AddLast(30);
 
+            list.IndexOf(2);
         }
     }
 }
