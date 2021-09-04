@@ -13,6 +13,8 @@ namespace Data_Structures
             list.AddLast(30);
 
             list.IndexOf(2);
+
+            list.Contains(8);
         }
     }
 }

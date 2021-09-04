@@ -54,13 +54,18 @@ namespace Data_Structures.Linked_List
         {
             int index = 0;
             var current = first;
-            while(current!=null)
+            while (current != null)
             {
                 if (current.value == item) return index;
                 current = current.next;
                 index++;
             }
             return -1;
+        }
+
+        public bool Contains(int item)
+        {
+            return IndexOf(item) != -1;
         }
     }
 }
