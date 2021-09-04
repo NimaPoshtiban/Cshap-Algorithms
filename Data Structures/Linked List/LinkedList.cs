@@ -19,11 +19,17 @@ namespace Data_Structures.Linked_List
         }
         private Node first;
         private Node last;
+
+        private bool IsEmpty()
+        {
+            return first == null;
+        }
+        
         public void AddLast(int item)
         {
             var node = new Node(item);
 
-            if (first == null)
+            if (IsEmpty())
                 first = last = node;
             else
             {
@@ -32,6 +38,18 @@ namespace Data_Structures.Linked_List
             }
 
         }
+        public void AddFirst(int item)
+        {
+            var node = new Node(item);
+            if (IsEmpty())
+                first = last = node;
+            else
+            {
+                node.next = first;
+                first = node;
+            }
+        }
+
     }
 }
 
