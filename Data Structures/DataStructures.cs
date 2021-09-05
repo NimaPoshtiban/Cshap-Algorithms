@@ -12,7 +12,6 @@ namespace Data_Structures
             list.AddLast(20);
             list.AddLast(30);
 
-            
         }
     }
 }
