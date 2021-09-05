@@ -136,6 +136,27 @@ namespace Data_Structures.Linked_List
             }
             return array;
         }
+
+        public void Reverse()
+        {
+            //[1->2->3]
+            // p  c  n 
+            var privous = first;
+            var current = first.next;
+
+
+            while (current != null)
+            {
+                var next = current.next;
+                current.next = privous;
+                privous = current;
+                current = next;
+            }
+
+            last = first;
+            last.next = null;
+            first = privous;
+        }
     }
 }
 
