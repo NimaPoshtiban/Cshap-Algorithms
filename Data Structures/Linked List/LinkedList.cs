@@ -136,7 +136,7 @@ namespace Data_Structures.Linked_List
             }
             return array;
         }
-
+        // an algorithm for reversing a single linked list
         public void Reverse()
         {
             //[1->2->3]
@@ -156,6 +156,28 @@ namespace Data_Structures.Linked_List
             last = first;
             last.next = null;
             first = privous;
+        }
+
+        //an Algorithm for getting values basded on their distance from the Tail
+        public int GetKthFromTheEnd(int k)
+        {
+            if (k == 0) return last.value;
+
+            var firstPointer = first;
+            var secondPointer = first;
+
+            for (int i = 1; i <= k; i++)
+            {
+                if (secondPointer == null) throw new Exception("Invalid Number, Number is out of range");
+                secondPointer = secondPointer.next;
+            }
+
+            while (secondPointer != last)
+            {
+                firstPointer = firstPointer.next;
+                secondPointer = secondPointer.next;
+            }
+            return firstPointer.value;
         }
     }
 }
