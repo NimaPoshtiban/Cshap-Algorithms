@@ -19,6 +19,7 @@ namespace Data_Structures.Linked_List
         }
         private Node first;
         private Node last;
+        private int size;
 
         private bool IsEmpty()
         {
@@ -36,7 +37,7 @@ namespace Data_Structures.Linked_List
                 last.next = node;
                 last = node;
             }
-
+            size++;
         }
         public void AddFirst(int item)
         {
@@ -48,6 +49,7 @@ namespace Data_Structures.Linked_List
                 node.next = first;
                 first = node;
             }
+            size++;
         }
 
         public int IndexOf(int item)
@@ -76,12 +78,15 @@ namespace Data_Structures.Linked_List
             if (first == last)
             {
                 first = last = null;
-                return;
+            }
+            else
+            {
+                var second = first.next;
+                first.next = null;
+                first.next = second;
             }
 
-            var second = first.next;
-            first.next = null;
-            first.next = second;
+            size--;
         }
 
         public void RemoveLast()
@@ -92,14 +97,17 @@ namespace Data_Structures.Linked_List
             if (first == last)
             {
                 first = last = null;
-                return;
+            }
+            else
+            {
+                var privous = GetPrevious(last);
+                last = privous;
+                last.next = null;
             }
 
-            var privous = GetPrevious(last);
-            last = privous;
-            last.next = null;
+            size--;
         }
-
+        // returns previous node
         private Node GetPrevious(Node node)
         {
             var current = first;
@@ -109,6 +117,11 @@ namespace Data_Structures.Linked_List
                 current = current.next;
             }
             return null;
+        }
+
+        public int Size()
+        {
+            return size;
         }
     }
 }
