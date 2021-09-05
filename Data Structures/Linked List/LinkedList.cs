@@ -83,6 +83,33 @@ namespace Data_Structures.Linked_List
             first.next = null;
             first.next = second;
         }
+
+        public void RemoveLast()
+        {
+            if (IsEmpty())
+                throw new Exception(" No Such element ");
+
+            if (first == last)
+            {
+                first = last = null;
+                return;
+            }
+
+            var privous = GetPrevious(last);
+            last = privous;
+            last.next = null;
+        }
+
+        private Node GetPrevious(Node node)
+        {
+            var current = first;
+            while (current != null)
+            {
+                if (current.next == node) return current;
+                current = current.next;
+            }
+            return null;
+        }
     }
 }
 
