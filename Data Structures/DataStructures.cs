@@ -15,6 +15,8 @@ namespace Data_Structures
             list.IndexOf(2);
 
             list.Contains(8);
+
+            list.RemoveFirst();
         }
     }
 }

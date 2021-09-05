@@ -67,6 +67,22 @@ namespace Data_Structures.Linked_List
         {
             return IndexOf(item) != -1;
         }
+
+        public void RemoveFirst()
+        {
+            if (IsEmpty())
+                throw new Exception(" No Such element ");
+
+            if (first == last)
+            {
+                first = last = null;
+                return;
+            }
+
+            var second = first.next;
+            first.next = null;
+            first.next = second;
+        }
     }
 }
 
