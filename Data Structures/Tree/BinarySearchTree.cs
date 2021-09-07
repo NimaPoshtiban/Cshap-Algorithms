@@ -93,8 +93,8 @@ namespace Data_Structures.Tree
         }
         private void TraverseInOrder(Node root)
         {
-            if(root==null) return;
-            TraverseInOrder(root.leftChild); 
+            if (root == null) return;
+            TraverseInOrder(root.leftChild);
             Console.WriteLine(root.value);
             TraverseInOrder(root.rightChild);
         }
@@ -110,5 +110,19 @@ namespace Data_Structures.Tree
             TraversePostOrder(root.rightChild);
             Console.WriteLine(root.value);
         }
+
+        // CalCulating the height of a tree
+        public int Height()
+        {
+            return Height(root);
+        }
+        private int Height(Node root)
+        {
+            if (root.leftChild == null && root.rightChild == null) return 0;
+
+            return 1 + Math.Max(Height(root.rightChild), Height(root.leftChild));
+        }
+
+
     }
 }
