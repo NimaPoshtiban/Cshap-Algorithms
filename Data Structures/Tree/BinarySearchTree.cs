@@ -8,7 +8,7 @@ namespace Data_Structures.Tree
 {
     public class BinarySearchTree
     {
-        private class Node
+        public class Node
         {
             public int value;
             public Node leftChild;
@@ -70,6 +70,45 @@ namespace Data_Structures.Tree
                 }
             }
             return false;
+        }
+        // Searching the Tree using Depth first approach Pre-Order 
+        public void TraversePreOrder()
+        {
+            TraversePreOrder(root);
+        }
+        private void TraversePreOrder(Node root)
+        {
+            if (root == null) return;
+            Console.WriteLine(root.value);
+            TraversePreOrder(root.leftChild);
+            TraversePreOrder(root.rightChild);
+        }
+
+        // Searching the Tree using Depth first approach In-Order 
+        // 
+
+        public void TraverseInOrder()
+        {
+            TraverseInOrder(root);
+        }
+        private void TraverseInOrder(Node root)
+        {
+            if(root==null) return;
+            TraverseInOrder(root.leftChild); 
+            Console.WriteLine(root.value);
+            TraverseInOrder(root.rightChild);
+        }
+
+        public void TraversePostOrder()
+        {
+            TraversePostOrder(root);
+        }
+        private void TraversePostOrder(Node root)
+        {
+            if (root == null) return;
+            TraversePostOrder(root.leftChild);
+            TraversePostOrder(root.rightChild);
+            Console.WriteLine(root.value);
         }
     }
 }
