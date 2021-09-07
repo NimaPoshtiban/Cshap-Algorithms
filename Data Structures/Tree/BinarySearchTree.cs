@@ -118,6 +118,8 @@ namespace Data_Structures.Tree
         }
         private int Height(Node root)
         {
+            if (root == null) return -1;
+
             if (root.leftChild == null && root.rightChild == null) return 0;
 
             return 1 + Math.Max(Height(root.rightChild), Height(root.leftChild));
