@@ -125,6 +125,23 @@ namespace Data_Structures.Tree
             return 1 + Math.Max(Height(root.rightChild), Height(root.leftChild));
         }
 
+        // finds the minimum value in the tree
+        public int Min()
+        {
+            return Min(root);
+        }
+
+        private int Min(Node root)
+        {
+            if (root == null) throw new InvalidOperationException();
+
+            if (root.leftChild == null && root.rightChild == null) return root.value;
+
+            var left = Min(root.leftChild);
+            var right = Min(root.rightChild);
+
+            return Math.Min(Math.Min(left, right), root.value);
+        }
 
     }
 }
