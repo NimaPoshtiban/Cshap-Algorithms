@@ -50,5 +50,26 @@ namespace Data_Structures.Tree
                 }
             }
         }
+
+        public bool Find(int value)
+        {
+            var current = root;
+            while (current != null)
+            {
+                if (value > current.value)
+                {
+                    current = current.rightChild;
+                }
+                else if (value < current.value)
+                {
+                    current = current.leftChild;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
